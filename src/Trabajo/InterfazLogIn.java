@@ -63,21 +63,21 @@ class LaminaLogIn extends JPanel  {
  
     			JLabel usuario= new JLabel("Usuario:");	
     			campo_usuario=new JTextField();
-    			JLabel contraseña= new JLabel("Contraseña:");
-    			campo_contraseña=new JPasswordField();
+    			JLabel contrasenia= new JLabel("contrasenia:");
+    			campo_contrasenia=new JPasswordField();
     			JButton ingresar=new JButton("Ingresar");
     			//ingresar.setForeground(Color.yellow);
     			
     			campo_usuario.addFocusListener(new VerificaMail());
-    			campo_contraseña.getDocument().addDocumentListener(new VerificaPass());
+    			campo_contrasenia.getDocument().addDocumentListener(new VerificaPass());
     			ingresar.addActionListener(new IniciaSesion());
     			
     			
     			
     			add(usuario);
     			add(campo_usuario);
-    			add(contraseña);
-    			add(campo_contraseña);
+    			add(contrasenia);
+    			add(campo_contrasenia);
     			add(ingresar);
     		}
     
@@ -147,18 +147,18 @@ class LaminaLogIn extends JPanel  {
 			// TODO Auto-generated method stub
 			char [] pass;
 			
-			pass= campo_contraseña.getPassword();
-			contraseñaCorrecta=false;
+			pass= campo_contrasenia.getPassword();
+			contraseniaCorrecta=false;
 			
 			if(pass.length<8 || pass.length>12) {
 
-				campo_contraseña.setBackground(Color.red);
-				contraseñaCorrecta=false;
+				campo_contrasenia.setBackground(Color.red);
+				contraseniaCorrecta=false;
 				
 			}else {
 
-				campo_contraseña.setBackground(Color.green);
-				contraseñaCorrecta=true;
+				campo_contrasenia.setBackground(Color.green);
+				contraseniaCorrecta=true;
 				
 			}
 		}
@@ -167,20 +167,20 @@ class LaminaLogIn extends JPanel  {
 		public void removeUpdate(DocumentEvent e) {
 			// TODO Auto-generated method stub
 			char [] pass;
-			contraseñaCorrecta=false;
+			contraseniaCorrecta=false;
 			
-			pass= campo_contraseña.getPassword();
+			pass= campo_contrasenia.getPassword();
 			
 			if(pass.length<8 || pass.length>12) {
 			
-				campo_contraseña.setBackground(Color.red);
-				contraseñaCorrecta=false;
+				campo_contrasenia.setBackground(Color.red);
+				contraseniaCorrecta=false;
 
 				
 			}else {
 	
-				campo_contraseña.setBackground(Color.green);
-				contraseñaCorrecta=true;
+				campo_contrasenia.setBackground(Color.green);
+				contraseniaCorrecta=true;
 
 			}
 		}
@@ -197,7 +197,7 @@ class LaminaLogIn extends JPanel  {
 
 		public void actionPerformed(ActionEvent e) {
 			
-    		if(mailCorrecto==true && contraseñaCorrecta==true) {
+    		if(mailCorrecto==true && contraseniaCorrecta==true) {
     			
     			JOptionPane.showMessageDialog(LaminaLogIn.this, "Datos correctos","Ingreso", 1);
     			System.exit(0);
@@ -216,9 +216,9 @@ class LaminaLogIn extends JPanel  {
     }
    // Programa p=new Programa();
     JTextField campo_usuario;
-    JPasswordField campo_contraseña;
+    JPasswordField campo_contrasenia;
     boolean mailCorrecto;
-    boolean contraseñaCorrecta;
+    boolean contraseniaCorrecta;
 
     public void cierraVentana() {
     	
