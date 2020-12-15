@@ -204,7 +204,6 @@ class LaminaLogIn extends JPanel  {
     			
     			ingresoCorrecto=true;
     			cierraVentana();
-    			//p.setVisible(true);
     			
     		}else {
     			JOptionPane.showMessageDialog(LaminaLogIn.this, "Datos incorrectos","Error al iniciar sesion", 0);
@@ -214,7 +213,6 @@ class LaminaLogIn extends JPanel  {
 		}
     	
     }
-   // Programa p=new Programa();
     JTextField campo_usuario;
     JPasswordField campo_contrasenia;
     boolean mailCorrecto;
