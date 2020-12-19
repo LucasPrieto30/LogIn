@@ -52,7 +52,6 @@ class LaminaLogIn extends JPanel  {
     	setLayout(new UbicaCampos());
     			
     		try {
-    			
     			fondo=ImageIO.read(ruta_fondo);
     			}
     		catch(IOException e) {
