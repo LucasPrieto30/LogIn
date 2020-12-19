@@ -14,7 +14,6 @@ public class InterfazLogIn {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		PantallaLogIn login=new PantallaLogIn();
-		
 		login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		login.setVisible(true);
 	
