@@ -26,7 +26,7 @@ class PantallaLogIn extends JFrame{
 	
 	public PantallaLogIn (){
 		
-		
+			
 		setBounds(500,250,640,430);
 		setTitle("Log in");
 		URL icono1=PantallaLogIn.class.getResource("imgs/icono.png");
